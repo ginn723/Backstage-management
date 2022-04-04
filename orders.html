@@ -5,20 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./stylesheets/all.css" />
     <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
     />
+    <link rel="stylesheet" href="./stylesheets/all.css" />
   </head>
   <body>
     <div class="d-flex">
       <aside class="sidebar vh-100 border-end pt-3 bg-white d-flex flex-column">
         <!-- 1. 後台名稱 -->
-        <div class="px-4">
-          <strong>Cinnroll</strong>
-          <small>- 後台管理</small>
-        </div>
+        <h1 class="px-4 fs-4">
+        <strong>Cinnroll</strong>
+        <small>- 後台管理</small>
+        </h1>
         <!-- 2. 選單 -->
         <div class="overflow-auto mt-3">
           <div>
@@ -237,13 +237,9 @@
                             <li><a class="dropdown-item active" href="#">修改狀態</a></li>
                             <li><a class="dropdown-item" href="#">刪除訂單</a></li>
                           </ul>
-                        
-
                       </div>
                     </td>
                   </tr>
-
-
                 </tbody>
               </table>
             </div>
@@ -280,27 +276,16 @@
             </div>
         </div>
       </div>
-
-      <script>
-        const modalByDel = document.querySelector('#deleteModal');
-        modalByDel.addEventListener('show.bs.modal', function(e) {
-          const button = e.relatedTarget;
-          const orderId = button.dataset.bsOrderId;
-          console.log(button, orderId);
-          const modalText = modalByDel.querySelector('#deleteText');
-
-          modalText.textContent = orderId;
-        })
-      </script>
         </div>
       </main>
     </div>
 
-    <script src="./javascripts/all.js"></script>
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-      crossorigin="anonymous"
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"
     ></script>
+    <script src="./javascripts/all.js"></script>
+    <script src="./javascripts/delmodal.js"></script>
   </body>
 </html>
